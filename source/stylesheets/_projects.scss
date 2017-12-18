@@ -1,0 +1,135 @@
+@mixin project-padding {
+  padding: 14px 20px;
+}
+
+.project-divisor {
+  display: flex;
+  justify-content: space-between;
+
+  &> div {
+    &:first-child {
+      flex: 6.5;
+    }
+    &:last-child {
+      flex: 3.5;
+      min-width: 300px;
+    }
+  }
+}
+
+.project-container {
+  background-color: white;
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  font-family: arial;
+  margin: 0 20px 25px 20px;
+  color: #424242;
+}
+
+#projects-list {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-top: 70px;
+
+}
+
+.project-name {
+  margin: 0;
+}
+
+.project-header {
+  @include project-padding;
+  border-bottom: thin solid #4041401f;
+}
+
+.project-body {
+  @include project-padding;
+}
+
+.project-status {
+  text-align: center;
+  border: 1px solid;
+  border-radius: 2px;
+  padding: 8px;
+  color: red;
+  font-size: 14px;
+}
+
+.project-sub-header-details {
+  i {
+    margin-right: 7px;
+  }
+
+  span {
+    margin-right: 10px;
+    color: #404140cc;
+    text-decoration: underline;
+  }
+
+  height: 20px;
+  margin-bottom: 12px;
+}
+
+.project-description {
+  line-height: 24px;
+  margin-right: 70px;
+  font-size: 14px;
+}
+
+.effort-level-box {
+  @include flexsc;
+
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  margin-top: 32px; // Hight + margin-bottom of .project-sub-header-details 
+
+  &> div {
+    color: #858D99;
+    padding: 20px 25px 5px 20px;
+    background-color: #EFF3F7;
+    width: 50%;
+    height: 100px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &:first-child {
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  
+    &> span {
+      font-weight: bold;
+
+      // Title
+      &:first-child {
+        
+      }
+
+      // Number
+      &:last-child {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+.completed-actual-level-of-effort {
+  &> span {
+    // Title
+    &:first-child {
+      color: #404140;
+    }
+
+    // Number
+    &:last-child {
+      color: #039833;
+    }
+  }
+}
+
+.completed-status {
+  color: #039833;
+}

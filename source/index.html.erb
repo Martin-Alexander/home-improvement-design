@@ -1,0 +1,39 @@
+<div id="projects-list">
+  <% data.projects.each do |project| %>
+    <div class="project-container">
+      <div class="project-header">
+        <div class="project-divisor">
+          <div>
+            <h1 class="project-name"><%= project.name %></h1>
+          </div>
+          <div>
+            <div class="project-status <%= " completed-status" if project.status == "completed" %>"><%= project.status.upcase %></div>
+          </div>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-divisor">
+          <div>
+            <div class="project-sub-header-details">
+              <i class="fa fa-user" aria-hidden="true"></i><span><%= project.user.name %></span>
+              <i class="fa fa-clock-o" aria-hidden="true"></i><span><%= time_ago_in_words(DateTime.parse(project.created_at)) %></span>
+            </div>
+            <div class="project-description"><%= project.description %></div>
+          </div>
+          <div>
+            <div class="effort-level-box">
+              <div>
+                <span>Estimated level of effort</span>
+                <span><%= project.estimated_effort %></span>
+              </div>
+              <div <%= "class=\"completed-actual-level-of-effort\"" if project.status == "completed" %>">
+                <span>Actual level of effort</span>
+                <span><%= project.actual_effort %></span>
+              </div>
+            </div>
+          </div>
+        </div>      
+      </div>
+    </div>
+  <% end %>
+</div>
