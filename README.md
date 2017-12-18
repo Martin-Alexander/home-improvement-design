@@ -1,4 +1,4 @@
-###Setup
+##Setup
 
 Git clone and navigate to directory
 
@@ -8,4 +8,4 @@ Git clone and navigate to directory
   middleman server
 ```
 
-Got to `localhost:4567
+Got to `localhost:4567`
