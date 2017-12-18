@@ -1,11 +1,16 @@
-##Setup
+## Setup
+
+This is a [middleman](https://middlemanapp.com) static webpage
+
+```shell
+gem install middleman
+```
 
 Git clone and navigate to directory
 
-```ruby 
-  gem install middleman
-  bundle install
-  middleman server
+```shell 
+bundle install
+middleman server
 ```
 
-Got to `localhost:4567`
+Go to `localhost:4567`
