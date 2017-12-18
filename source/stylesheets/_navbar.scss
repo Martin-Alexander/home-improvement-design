@@ -1,0 +1,26 @@
+#navbar {
+  @include flexsc;
+  background-color: #0033CC;
+  padding: 10px;
+  color: white;
+  font-family: arial;
+}
+
+#navbar-left {
+  @include flexsc;
+}
+
+#nav-logo {
+  margin: 0;
+  font-weight: bold;
+}
+
+#nav-new-project {
+  width: 120px;
+  background-color: #FD0133;
+}
+
+#nav-sign-out {
+  width: 80px;
+  background-color: #013398; 
+}
