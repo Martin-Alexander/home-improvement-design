@@ -15,3 +15,12 @@
   status: completed
   user:
     name: Martin Giannakopoulos
+
+- name: Some Information
+  created_at: "2017-12-17T23:08:17-05:00"
+  description: Project data can be found in data/projects.yml
+  estimated_effort: 1
+  actual_effort:
+  status: started
+  user:
+    name: Martin Giannakopoulos
